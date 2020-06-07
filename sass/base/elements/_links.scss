@@ -1,0 +1,16 @@
+a {
+	color: $color__link;
+	-webkit-transition: all 0.25s ease-out;
+	-moz-transition: all 0.25s ease-out;
+	transition: all 0.25s ease-out;
+	text-decoration: none;
+
+	&:visited {
+		color: $color__link-visited;
+	}
+	&:hover,
+	&:focus {
+		color: #0599c2;
+		text-decoration: underline;
+	}
+}

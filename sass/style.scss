@@ -16,92 +16,46 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned.
 
 */
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 
 
 --------------------------------------------------------------*/
-/* Text Color */
-/* Link Colors */
+
+// Import variables and mixins.
+@import "abstracts/abstracts";
+
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
+
+
 /* Box sizing
 --------------------------------------------- */
-/* Inherit box-sizing to more easily change it's value on a component level.
-@link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
-}
-
-html {
-	box-sizing: border-box;
-}
+@import "generic/box-sizing";
 
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-/* Typography
---------------------------------------------- */
-body {
-	font-family: "Libre Baskerville", sans-serif;
-	font-size: 70%;
-}
+@import "base/base";
 
-/* Elements
---------------------------------------------- */
-/* base CSS */
-* {
-	-webkit-box-sizing: border-box;
-	/* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;
-	/* Firefox, other Gecko */
-	box-sizing: border-box;
-	/* Opera/IE 8+ */
-}
-
-html, body {
-	padding: 0;
-	margin: 0;
-}
-
-body {
-	color: #325050;
-	background: white;
-}
-
-/* Links
---------------------------------------------- */
-a {
-	color: #0d8ba1;
-	-webkit-transition: all 0.25s ease-out;
-	-moz-transition: all 0.25s ease-out;
-	transition: all 0.25s ease-out;
-	text-decoration: none;
-}
-
-a:visited {
-	color: #1a5952;
-}
-
-a:hover, a:focus {
-	color: #0599c2;
-	text-decoration: underline;
-}
 
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
+@import "components/components";
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
+
+
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
+
 /* Accessibility
 --------------------------------------------- */
-
-/*# sourceMappingURL=style.css.map */
+@import "utilities/accessibility";
