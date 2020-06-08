@@ -35,3 +35,40 @@ function cms_developer_challenge_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'cms_developer_challenge_pingback_header' );
+
+
+/*
+*	Add multi sidebar to template to able customize and edit
+*   id: 
+		- sidebar-widget-design-selection
+*/
+function template_sidebar() {
+    register_sidebar(
+        array (
+            'name' => __( 'Design Selection', 'cms-developer-challenge' ),
+            'id' => 'sidebar-widget-design-selection',
+            'description' => __( 'Design Selection', 'cms-developer-challenge' ),
+            'before_widget' => '<div class="widget-content">',
+            'after_widget' => "</div>",
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>',
+        )
+    );
+}
+add_action( 'widgets_init', 'template_sidebar' );
+
+
+
+/*
+*	Add multi menu to sidebar template to able customize and edit
+*   id: 
+		- sidebar-menu-design-zen-resources
+*/
+function cms_custom_new_menu() {
+	register_nav_menus(
+	  array(
+		'sidebar-menu-design-zen-resources' => __( 'Zen Resources', 'cms-developer-challenge' ),
+	  )
+	);
+  }
+add_action( 'init', 'cms_custom_new_menu' );
