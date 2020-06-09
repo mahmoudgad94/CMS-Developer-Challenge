@@ -49,6 +49,7 @@ $data=cms_gets_block_template( parse_blocks( get_the_content( ) ) );
 	<div class="requirements" id="zen-requirements" role="article">
 		<?php echo $data["title"][4]; ?>
 		<?php echo $data["paragraph"][4]; ?>
+		<!-- TODO:: change footer with dynamic wordPress block? -->
 		<p role="contentinfo">By <a href="http://www.mezzoblue.com/">Dave Shea</a>. Bandwidth graciously donated by <a href="http://www.mediatemple.net/">mediatemple</a>. Now available: <a href="http://www.amazon.com/exec/obidos/ASIN/0321303474/mezzoblue-20/">Zen Garden, the book</a>.</p>
 	</div>
 
