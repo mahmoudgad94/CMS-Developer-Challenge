@@ -1,0 +1,34 @@
+
+.sidebar {
+	background: #edf4f0;
+	h3 {
+		display: none;
+	}
+	a {
+		color: #607476;
+		text-decoration: none;
+		&:hover {
+			color: #49968e;
+		}
+		&:focus {
+			color: #49968e;
+		}
+	}
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		overflow: hidden;
+	}
+}
+@media only screen and (min-width: 1132px) {
+	.sidebar {
+		li {
+			float: none;
+			width: auto;
+			padding-left: 0;
+			padding-right: 0;
+			margin: 0 29.4% 0 14.7%;
+		}
+	}
+}

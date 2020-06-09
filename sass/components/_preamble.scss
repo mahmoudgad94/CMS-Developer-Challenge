@@ -1,0 +1,12 @@
+.preamble {
+	width: 80%;
+	margin: 0 auto;
+}
+@media only screen and (min-width: 1132px) {
+    .preamble {
+        float: left;
+        clear: left;
+        width: 66%;
+        padding: 1em 5% 1em 10%;
+    }
+}

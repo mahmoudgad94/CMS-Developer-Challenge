@@ -1,4 +1,5 @@
 $color__background-body: white;
+$color__background-head: #2d6360;
 
 
 /* Text Color */
@@ -6,6 +7,21 @@ $color__text-main-color: #325050;
 
 /* Link Colors */
 $color__link: #0d8ba1;
+$color__link-secondary: #809b7e;
 $color__link-visited: #1a5952;
 $color__link-hover: #191970;
+$color__link-hover-secondary: white;
+$color__link-hover-bc: #3d8a9f;
 
+/* colors h1,2,3 */
+$color__head1: white;
+$color__head2: rgba(255,255,255,0.6);
+$color__head3: #2e484c;
+
+
+/* Div */ 
+$color__div-bc:rgba(138,188,159,0.5);
+
+/* Background Images */
+
+$url__div-bc:url(images/contours-opaque.png), url(images/gridlines-opaque.png), url(images/bamboo.png);

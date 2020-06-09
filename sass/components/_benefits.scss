@@ -1,0 +1,34 @@
+div.benefits {
+	background-attachment: scroll, scroll, fixed;
+	background-color: $color__div-bc;
+	//  TODO:: replace it with dynamic background 
+	background-image: $url__div-bc;
+	background-repeat: repeat, repeat, no-repeat;
+	background-size: auto, auto, cover;
+	padding-bottom: 3em;
+	margin-bottom: 3em;
+	h3 {
+		margin-top: 0;
+	}
+	p {
+		margin-bottom: 0;
+	}
+}
+
+
+@media only screen and (min-width: 1132px) {
+    .benefits {
+        width: 100%;
+		padding-left: 10%;
+		padding-right: 38%;
+		margin: 0;
+		padding-bottom: 4em;
+
+		h3 {
+			width: 100%;
+		}
+		p {
+			width: 100%;
+		}
+    }
+}

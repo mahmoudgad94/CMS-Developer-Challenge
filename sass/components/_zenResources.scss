@@ -1,0 +1,80 @@
+
+
+.zen-resources {
+	ul {
+		margin: 0;
+	}
+	li {
+		float: left;
+		width: 50%;
+		padding: 1.5em 10%;
+		border-top: solid 1px #d9e3dc;
+		color: #c0cac3;
+		font-style: italic;
+		border-top: solid 1px #a0b9ad;
+		font-style: normal;
+		&:nth-child(2n+1) {
+			clear: left;
+		}
+		&:last-child {
+			float: none;
+			width: auto;
+			border-bottom: solid 1px #a0b9ad;
+		}
+	}
+	a {
+		display: block;
+		margin-bottom: 0.25em;
+		font-family: $font__secondary;
+		font-size: 1.2em;
+		font-style: normal;
+		text-transform: uppercase;
+	}
+	overflow: hidden;
+	background-color: $color__div-bc;
+	background-image: url(images/bamboo.png);
+}
+@media only screen and (max-width: 500px) {
+	.zen-resources {
+		li {
+			padding: 1em 5%;
+		}
+	}
+}
+@media only screen and (max-width: 320px) {
+	.zen-resources {
+		li {
+			float: none;
+			width: 100%;
+		}
+	}
+}
+
+@media only screen and (min-width: 1132px) {
+	.zen-resources {
+		position: absolute;
+		top: 360px;
+		right: 0;
+		width: 33.3%;
+		padding: 0 0 20px 0;
+		margin: 0;
+		overflow: visible;
+		background: transparent;
+		position: absolute;
+		top: 1310px;
+		right: 0;
+		width: 34%;
+		background: transparent;
+		h3 {
+			display: none;
+		}
+		ul {
+			width: 55.9%;
+			margin: 0 29.4% 0 14.7%;
+		}
+		li {
+			padding: 1.5em 0 1.25em 0;
+			margin: 0;
+		}
+	}
+}

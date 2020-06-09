@@ -1,0 +1,27 @@
+div.participation {
+	background-attachment: scroll, scroll, fixed;
+	background-color: $color__div-bc;
+	//  TODO:: replace it with dynamic background 
+	background-image: $url__div-bc;
+	background-repeat: repeat, repeat, no-repeat;
+	background-size: auto, auto, cover;
+	padding: 3em 0;
+	margin-top: 3em;
+	h3 {
+		margin-top: 0;
+	}
+	p {
+		margin-bottom: 0;
+	}
+}
+@media only screen and (min-width: 1132px) {
+
+    .participation {
+        h3 {
+            width: 100%;
+        }
+        p {
+            width: 100%;
+        }
+    }
+}

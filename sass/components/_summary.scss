@@ -1,0 +1,43 @@
+.summary 
+{
+    padding-top: 2em;
+	width: 80%;
+    margin: 0 auto;
+    h1,h2,h3,h4,h5,h6
+    {
+        padding:0px;
+        &::before{
+            padding:0px;
+        }
+        margin: 0.75em 0;
+        line-height: 2;
+        color: #325050;
+        background: #fff;
+    }
+}
+
+/*--------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+	.summary {
+		p,h1,h2,h3,h4,h5,h6 {
+			&:last-child {
+				display: none;
+			}
+		}
+    }
+}
+@media only screen and (min-width: 1132px) {
+    .summary {
+        float: left;
+        clear: left;
+        width: 66%;
+        padding: 1em 5% 1em 10%;
+        padding-top: 3.25em;
+        h1,h2
+        {
+            font-size: 1em;
+        }
+    }
+}

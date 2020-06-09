@@ -1,0 +1,124 @@
+
+.requirements {
+	p {
+		&:nth-child(5) {
+			padding-bottom: 2em;
+		}
+		&:last-child {
+			width: auto;
+			padding: 1em 12%;
+			margin: 0;
+			color: rgba(255, 255, 255, 0.4);
+			background: #3e5d67;
+			background-attachment: fixed, fixed, fixed, scroll;
+			background-image: url(images/contours.png), url(images/gridlines.png), url(images/noise.png), url(images/koi.jpg);
+			background-position: 0 0, -5px -25px, 0 0, 0 50%;
+			background-repeat: repeat, repeat, repeat, no-repeat;
+			background-size: auto, auto, auto, cover;
+			font-size: 2em;
+			font-style: italic;
+			text-align: center;
+			a {
+				color: rgba(255, 255, 255, 0.7);
+				font-style: normal;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.requirements {
+		p {
+			&:last-child {
+				padding: 1em 6%;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1132px) {
+	.requirements {
+		h3 {
+			float: left;
+			clear: left;
+			width: 66%;
+			padding: 1em 5% 1em 10%;
+			margin: 0;
+			padding-bottom: 0;
+		}
+		p {
+			float: left;
+			clear: left;
+			width: 66%;
+			padding: 1em 5% 1em 10%;
+			margin: 0;
+			padding-bottom: 0;
+			&:nth-child(5) {
+				padding-bottom: 4em;
+			}
+			&:last-child {
+				padding-bottom: 3em;
+				padding-top: 3em;
+				box-shadow: inset 0 0 100px rgba(255, 255, 255, 0.3);
+			}
+		}
+	}
+
+	div.requirements {
+		padding-top: 4em;
+	}
+}
+
+@media (min--moz-device-pixel-ratio: 1.5) {
+	.requirements {
+		p {
+			&:last-child {
+				background-image: url(images/contours@2x.png), url(images/gridlines.png), url(images/noise.png), url(images/koi.jpg);
+				background-size: 50% auto, auto, auto, cover;
+			}
+		}
+	}
+	
+}
+@media (-o-min-device-pixel-ratio: 3 / 2) {
+	.requirements {
+		p {
+			&:last-child {
+				background-image: url(images/contours@2x.png), url(images/gridlines.png), url(images/noise.png), url(images/koi.jpg);
+				background-size: 50% auto, auto, auto, cover;
+			}
+		}
+	}
+}
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+	.requirements {
+		p {
+			&:last-child {
+				background-image: url(images/contours@2x.png), url(images/gridlines.png), url(images/noise.png), url(images/koi.jpg);
+				background-size: 50% auto, auto, auto, cover;
+			}
+		}
+	}
+}
+
+@media (min-device-pixel-ratio: 1.5) {
+	.requirements {
+		p {
+			&:last-child {
+				background-image: url(images/contours@2x.png), url(images/gridlines.png), url(images/noise.png), url(images/koi.jpg);
+				background-size: 50% auto, auto, auto, cover;
+			}
+		}
+	}
+
+}
+@media (min-resolution: 1.5dppx) {
+	.requirements {
+		p {
+			&:last-child {
+				background-image: url(images/contours@2x.png), url(images/gridlines.png), url(images/noise.png), url(images/koi.jpg);
+				background-size: 50% auto, auto, auto, cover;
+			}
+		}
+	}
+}
