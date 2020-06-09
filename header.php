@@ -14,13 +14,11 @@ $cms_developer_challenge_description = get_bloginfo( 'description', 'display' );
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<title>CSS Zen Garden: The Beauty of CSS Design</title>
+	<title><?php bloginfo( 'title' ); ?></title>
 
 	<link rel="stylesheet" media="screen" href="style.css?v=8may2013">
-	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.csszengarden.com/zengarden.xml">
-
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- TODO::: implement dynamic author is found -->
+	<!-- TODO::: implement dynamic author if found -->
 	<meta name="author" content="Dave Shea">
 	<?php if ( $cms_developer_challenge_description || is_customize_preview() ) :  ?>
 		<meta name="description" content="<?php echo $cms_developer_challenge_description; ?>">
@@ -39,7 +37,7 @@ $cms_developer_challenge_description = get_bloginfo( 'description', 'display' );
 <div class="page-wrapper">
 	<section class="intro" id="zen-intro">
 		<header role="banner">
-			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1><?php bloginfo( 'name' ); ?></h1>
 			<!--  TODO:: implement links to navbar ?  -->
 			<?php	
 				// print description

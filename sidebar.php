@@ -20,7 +20,8 @@ if ( ! is_active_sidebar( 'side-bar-design-selection' ) && ! is_active_sidebar( 
         <div class="design-selection" id="design-selection">
             <h3 class="select"><?php  __( 'Select a Design:', 'cms-developer-challenge' ); ?></h3>
             <?php
-              $recent_posts = wp_get_recent_posts();
+            // TODO:: what about make 5 limit is dynamic
+              $recent_posts = wp_get_recent_posts(array( 'numberposts' => '5' ));
             ?>
             <nav role="navigation">
                 <ul>
