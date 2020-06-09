@@ -22,7 +22,8 @@
 	}
 }
 @media only screen and (min-width: 1132px) {
-	.sidebar {
+	.design-selection,.zen-resources
+	{
 		li {
 			float: none;
 			width: auto;
@@ -30,5 +31,14 @@
 			padding-right: 0;
 			margin: 0 29.4% 0 14.7%;
 		}
+	}
+	// 
+	.zen-resources ul {
+		width: 55.9%;
+		margin: 0 29.4% 0 14.7%;
+	}
+	.zen-resources li {
+		padding: 1.5em 0 1.25em 0;
+		margin: 0;
 	}
 }

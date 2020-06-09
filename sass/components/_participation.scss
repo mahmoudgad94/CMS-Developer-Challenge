@@ -15,8 +15,21 @@ div.participation {
 	}
 }
 @media only screen and (min-width: 1132px) {
-
+	div.participation, div.benefits {
+		width: 100%;
+		padding-left: 10%;
+		padding-right: 38%;
+		margin: 0;
+	}
     .participation {
+		h1,h2,h3,h4,h5,h6 {
+			margin: 2em 0 0 0;
+			color: #2e484c;
+			font-family: 'Julius Sans One', sans-serif;
+			font-size: 1.8em;
+			font-weight: normal;
+			text-transform: uppercase;
+		}
         h3 {
             width: 100%;
         }

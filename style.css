@@ -78,6 +78,31 @@ body {
 
 /* Head
 --------------------------------------------- */
+/* Links
+--------------------------------------------- */
+a {
+	color: #0d8ba1;
+	-webkit-transition: all 0.25s ease-out;
+	-moz-transition: all 0.25s ease-out;
+	transition: all 0.25s ease-out;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #1a5952;
+}
+
+a:hover, a:focus {
+	color: #0599c2;
+	text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
 header {
 	height: 230px;
 	padding: 20px 0 70px 0;
@@ -91,147 +116,14 @@ header {
 	text-align: center;
 }
 
-h1, h2 {
-	padding: 0 10%;
-	margin: 0;
-	color: white;
-	font-weight: normal;
-}
-
-h1 {
-	padding-top: 0;
-	padding-bottom: 5px;
-	border-bottom: none;
-	font-family: "Julius Sans One", sans-serif;
-	font-size: 3.2em;
-	text-transform: uppercase;
-}
-
-h1::before {
-	display: inline-block;
-	position: relative;
-	top: 20px;
-	content: "";
-	width: 80px;
-	height: 80px;
-	margin: -20px 20px 0 0;
-	background: url(images/enso.svg);
-	background-repeat: no-repeat;
-	background-size: 100%;
-	opacity: 0.6;
-}
-
-h2 {
-	display: block;
-	padding-top: 5px;
-	padding-bottom: 30px;
-	border-top: none;
-	color: rgba(255, 255, 255, 0.6);
-	font-size: 1.6em;
-	font-style: italic;
-}
-
-h2::before {
-	content: " ";
-	padding: 50px;
-}
-
-h3 {
-	margin: 2em 0 0 0;
-	color: #2e484c;
-	font-family: "Julius Sans One", sans-serif;
-	font-size: 1.8em;
-	font-weight: normal;
-	text-transform: uppercase;
-}
-
-p {
-	margin: 0.75em 0;
-	line-height: 2;
-}
-
-.page-wrapper {
-	position: relative;
-}
-
-/* Refactor scss code to separate files */
-@media only screen and (max-width: 600px) {
-	h1 {
-		margin-top: 30px;
-		font-size: 2.5em;
-	}
-	h1::before {
-		width: 50px;
-		height: 50px;
-	}
-	h2::before {
-		padding: 25px;
-	}
-}
-
 @media only screen and (max-width: 500px) {
 	header {
 		height: 250px;
 		padding-top: 0;
 	}
-	h1 {
-		margin: 0;
-	}
-	h1::before {
-		display: block;
-		left: 50%;
-		width: 50px;
-		height: 50px;
-		margin: 0 0 0 -25px;
-		padding: 0 0 35px 0;
-	}
-	h2::before {
-		padding: 0;
-	}
-}
-
-@media only screen and (max-width: 320px) {
-	h1 {
-		font-size: 2em;
-	}
-	h2 {
-		font-size: 1.3em;
-	}
-	.requirements p:last-child {
-		font-size: 1.4em;
-	}
-}
-
-@media only screen and (max-width: 1132px) {
-	header {
-		border-top: solid 10px rgba(19, 67, 71, 0.9);
-	}
-	p {
-		font-size: 1.2em;
-	}
-	li {
-		font-size: 1.2em;
-	}
-}
-
-@media only screen and (min-width: 500px) and (max-width: 1150px) {
-	.requirements p:last-child {
-		padding-bottom: 2em;
-		padding-top: 2em;
-	}
 }
 
 @media only screen and (min-width: 1132px) {
-	body {
-		background: #ffffff;
-		background: -moz-linear-gradient(left, #ffffff 0%, #ffffff 66%, #e5ede8 66%, #e5ede8 100%);
-		background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ffffff), color-stop(66%, #ffffff), color-stop(66%, #e5ede8), color-stop(100%, #e5ede8));
-		background: -webkit-linear-gradient(left, #ffffff 0%, #ffffff 66%, #e5ede8 66%, #e5ede8 100%);
-		background: -o-linear-gradient(left, #ffffff 0%, #ffffff 66%, #e5ede8 66%, #e5ede8 100%);
-		background: -ms-linear-gradient(left, #ffffff 0%, #ffffff 66%, #e5ede8 66%, #e5ede8 100%);
-		background: linear-gradient(to right, #ffffff 0%, #ffffff 66%, #e5ede8 66%, #e5ede8 100%);
-		font-size: 100%;
-	}
 	header {
 		width: 100%;
 		height: 310px;
@@ -241,6 +133,9 @@ p {
 		vertical-align: middle;
 		text-align: left;
 	}
+}
+
+@media only screen and (max-width: 1132px) {
 	header::before {
 		display: block;
 		content: " ";
@@ -265,35 +160,6 @@ p {
 		top: 306px;
 		height: 4px;
 		background: rgba(0, 39, 43, 0.075);
-	}
-	h1 {
-		display: inline-block;
-		position: relative;
-		margin: 15px 0 0 0;
-		padding: 60px 0 5px 0;
-	}
-	h1::before {
-		display: inline-block;
-		position: relative;
-		top: 65px;
-		content: "";
-		width: 125px;
-		height: 125px;
-		margin: -65px 40px 0 0;
-		background: url(images/enso.svg);
-		background-size: 100%;
-		opacity: 0.6;
-		-webkit-animation: koan 36000s infinite alternate;
-		-moz-animation: koan 36000s infinite alternate;
-		animation: koan 36000s infinite alternate;
-	}
-	h2 {
-		display: block;
-		margin: 0;
-		padding: 5px 0 60px 70px;
-	}
-	p {
-		font-size: 1em;
 	}
 	nav {
 		display: inline;
@@ -335,23 +201,11 @@ p {
 	}
 }
 
-/* Links
---------------------------------------------- */
-a {
-	color: #0d8ba1;
-	-webkit-transition: all 0.25s ease-out;
-	-moz-transition: all 0.25s ease-out;
-	transition: all 0.25s ease-out;
-	text-decoration: none;
-}
-
-a:visited {
-	color: #1a5952;
-}
-
-a:hover, a:focus {
-	color: #0599c2;
-	text-decoration: underline;
+/*--------------------------------------------------------------
+# Tags
+--------------------------------------------------------------*/
+.page-wrapper {
+	position: relative;
 }
 
 h1, h2 {
@@ -413,9 +267,98 @@ p {
 	line-height: 2;
 }
 
-/*--------------------------------------------------------------
-# Components
---------------------------------------------------------------*/
+/* Refactor scss code to separate files */
+@media only screen and (max-width: 600px) {
+	h1 {
+		margin-top: 30px;
+		font-size: 2.5em;
+	}
+	h1::before {
+		width: 50px;
+		height: 50px;
+	}
+	h2::before {
+		padding: 25px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	h1 {
+		margin: 0;
+	}
+	h1::before {
+		display: block;
+		left: 50%;
+		width: 50px;
+		height: 50px;
+		margin: 0 0 0 -25px;
+		padding: 0 0 35px 0;
+	}
+	h2::before {
+		padding: 0;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	h1 {
+		font-size: 2em;
+	}
+	h2 {
+		font-size: 1.3em;
+	}
+}
+
+@media only screen and (max-width: 1132px) {
+	p {
+		font-size: 1.2em;
+	}
+	li {
+		font-size: 1.2em;
+	}
+}
+
+@media only screen and (min-width: 1132px) {
+	body {
+		background: #ffffff;
+		background: -moz-linear-gradient(left, #ffffff 0%, #ffffff 66%, #e5ede8 66%, #e5ede8 100%);
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ffffff), color-stop(66%, #ffffff), color-stop(66%, #e5ede8), color-stop(100%, #e5ede8));
+		background: -webkit-linear-gradient(left, #ffffff 0%, #ffffff 66%, #e5ede8 66%, #e5ede8 100%);
+		background: -o-linear-gradient(left, #ffffff 0%, #ffffff 66%, #e5ede8 66%, #e5ede8 100%);
+		background: -ms-linear-gradient(left, #ffffff 0%, #ffffff 66%, #e5ede8 66%, #e5ede8 100%);
+		background: linear-gradient(to right, #ffffff 0%, #ffffff 66%, #e5ede8 66%, #e5ede8 100%);
+		font-size: 100%;
+	}
+	h1 {
+		display: inline-block;
+		position: relative;
+		margin: 15px 0 0 0;
+		padding: 60px 0 5px 0;
+	}
+	h1::before {
+		display: inline-block;
+		position: relative;
+		top: 65px;
+		content: "";
+		width: 125px;
+		height: 125px;
+		margin: -65px 40px 0 0;
+		background: url(images/enso.svg);
+		background-size: 100%;
+		opacity: 0.6;
+		-webkit-animation: koan 36000s infinite alternate;
+		-moz-animation: koan 36000s infinite alternate;
+		animation: koan 36000s infinite alternate;
+	}
+	h2 {
+		display: block;
+		margin: 0;
+		padding: 5px 0 60px 70px;
+	}
+	p {
+		font-size: 1em;
+	}
+}
+
 /*--------------------------------------------------------------
 # summary
 --------------------------------------------------------------*/
@@ -481,6 +424,12 @@ div.benefits p {
 }
 
 @media only screen and (min-width: 1132px) {
+	div.participation, div.benefits {
+		width: 100%;
+		padding-left: 10%;
+		padding-right: 38%;
+		margin: 0;
+	}
 	.benefits {
 		width: 100%;
 		padding-left: 10%;
@@ -516,25 +465,25 @@ div.benefits p {
 /*--------------------------------------------------------------
 # supporting
 --------------------------------------------------------------*/
-.supporting h3, .supporting p {
+.supporting {
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.supporting h3 h1, .supporting h3 h2, .supporting h3 h3, .supporting h3 h4, .supporting h3 h5, .supporting h3 h6, .supporting p h1, .supporting p h2, .supporting p h3, .supporting p h4, .supporting p h5, .supporting p h6 {
+.supporting h1, .supporting h2, .supporting h3, .supporting h4, .supporting h5, .supporting h6 {
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.supporting h3 p, .supporting p p {
+.supporting p {
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.supporting h3 .requirements, .supporting p .requirements {
+.supporting .requirements {
 	float: none;
 	clear: both;
 	width: 100%;
@@ -542,19 +491,19 @@ div.benefits p {
 	padding-right: 0;
 }
 
-.supporting h3 .requirements a, .supporting p .requirements a {
+.supporting .requirements a {
 	text-decoration: none;
 }
 
-.supporting h3 .requirements a:hover, .supporting p .requirements a:hover {
+.supporting .requirements a:hover {
 	text-decoration: underline;
 }
 
-.supporting h3 .requirements a:focus, .supporting p .requirements a:focus {
+.supporting .requirements a:focus {
 	text-decoration: underline;
 }
 
-.supporting h3 .requirements h3, .supporting p .requirements h3 {
+.supporting .requirements h3 {
 	padding-top: 0;
 }
 
@@ -690,6 +639,20 @@ div.participation p {
 }
 
 @media only screen and (min-width: 1132px) {
+	div.participation, div.benefits {
+		width: 100%;
+		padding-left: 10%;
+		padding-right: 38%;
+		margin: 0;
+	}
+	.participation h1, .participation h2, .participation h3, .participation h4, .participation h5, .participation h6 {
+		margin: 2em 0 0 0;
+		color: #2e484c;
+		font-family: 'Julius Sans One', sans-serif;
+		font-size: 1.8em;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
 	.participation h3 {
 		width: 100%;
 	}
@@ -720,6 +683,12 @@ div.benefits p {
 }
 
 @media only screen and (min-width: 1132px) {
+	div.participation, div.benefits {
+		width: 100%;
+		padding-left: 10%;
+		padding-right: 38%;
+		margin: 0;
+	}
 	.benefits {
 		width: 100%;
 		padding-left: 10%;
@@ -732,47 +701,6 @@ div.benefits p {
 	}
 	.benefits p {
 		width: 100%;
-	}
-}
-
-/*--------------------------------------------------------------
-# sidebar
---------------------------------------------------------------*/
-.sidebar {
-	background: #edf4f0;
-}
-
-.sidebar h3 {
-	display: none;
-}
-
-.sidebar a {
-	color: #607476;
-	text-decoration: none;
-}
-
-.sidebar a:hover {
-	color: #49968e;
-}
-
-.sidebar a:focus {
-	color: #49968e;
-}
-
-.sidebar ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	overflow: hidden;
-}
-
-@media only screen and (min-width: 1132px) {
-	.sidebar li {
-		float: none;
-		width: auto;
-		padding-left: 0;
-		padding-right: 0;
-		margin: 0 29.4% 0 14.7%;
 	}
 }
 
@@ -1003,7 +931,7 @@ li.viewall a {
 }
 
 .design-archives a {
-	color: rgba(255, 255, 255, 0.65);
+	color: white;
 }
 
 .design-archives a:visited {
@@ -1226,6 +1154,19 @@ li.viewall a {
 	font-style: normal;
 }
 
+@media only screen and (max-width: 320px) {
+	.requirements p:last-child {
+		font-size: 1.4em;
+	}
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1150px) {
+	.requirements p:last-child {
+		padding-bottom: 2em;
+		padding-top: 2em;
+	}
+}
+
 @media only screen and (max-width: 600px) {
 	.requirements p:last-child {
 		padding: 1em 6%;
@@ -1446,6 +1387,55 @@ footer a.zen-github:focus::before {
 @media only screen and (max-width: 500px) {
 	footer a {
 		margin: 0 0.5em;
+	}
+}
+
+/*--------------------------------------------------------------
+# sidebar
+--------------------------------------------------------------*/
+.sidebar {
+	background: #edf4f0;
+}
+
+.sidebar h3 {
+	display: none;
+}
+
+.sidebar a {
+	color: #607476;
+	text-decoration: none;
+}
+
+.sidebar a:hover {
+	color: #49968e;
+}
+
+.sidebar a:focus {
+	color: #49968e;
+}
+
+.sidebar ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	overflow: hidden;
+}
+
+@media only screen and (min-width: 1132px) {
+	.design-selection li, .zen-resources li {
+		float: none;
+		width: auto;
+		padding-left: 0;
+		padding-right: 0;
+		margin: 0 29.4% 0 14.7%;
+	}
+	.zen-resources ul {
+		width: 55.9%;
+		margin: 0 29.4% 0 14.7%;
+	}
+	.zen-resources li {
+		padding: 1.5em 0 1.25em 0;
+		margin: 0;
 	}
 }
 
