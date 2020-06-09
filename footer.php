@@ -9,7 +9,7 @@
  * @package Cms_Developer_Challenge
  */
 
- /**  TODO:: Implement dynamic footer  */
+ /* TODO:: Implement dynamic footer  */
 ?>
 	<footer>
 			<a href="http://validator.w3.org/check/referer" title="<?php echo esc_url( __( 'Check the validity of this site&#8217;s HTML', 'cms-developer-challenge' ) ); ?>" class="zen-validate-html"><?php echo esc_url( __( 'HTML', 'cms-developer-challenge' ) ); ?></a>

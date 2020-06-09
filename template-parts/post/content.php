@@ -21,7 +21,7 @@ $data=cms_gets_block_template( parse_blocks( get_the_content( ) ) );
 	<?php
 		if ( is_singular() ) :
 			the_title( '<h3 class="entry-title">', '</h3>' );
-		else :
+		else :+
 			the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 		endif;
 		echo $data["paragraph"][0];

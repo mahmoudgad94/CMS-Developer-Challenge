@@ -53,7 +53,7 @@ if ( ! is_active_sidebar( 'side-bar-design-selection' ) && ! is_active_sidebar( 
                         </a>
                     </li>
                     <li class="viewall">
-                        <a href="http://www.mezzoblue.com/zengarden/alldesigns/"
+                        <a href="/"
                             title="<?php echo  __( ' View every submission to the Zen Garden. ', 'cms-developer-challenge' ); ?>">
                             <?php  echo __( 'View All Designs ', 'cms-developer-challenge' ); ?></a>
                     </li>
