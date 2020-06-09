@@ -38,10 +38,16 @@ $cms_developer_challenge_description = get_bloginfo( 'description', 'display' );
 	<section class="intro" id="zen-intro">
 		<header role="banner">
 			<h1><?php bloginfo( 'name' ); ?></h1>
+
+			<meta charset="<?php bloginfo( 'charset' ); ?>">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="profile" href="http://gmpg.org/xfn/11">
+
 			<!--  TODO:: implement links to navbar ?  -->
 			<?php	
 				// print description
 				if ( $cms_developer_challenge_description || is_customize_preview() ) : 
+					echo "<meta name='description' content='$cms_developer_challenge_description'>";
 					echo "<h2>$cms_developer_challenge_description</h2>";
 				endif;
 			?>
