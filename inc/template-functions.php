@@ -71,4 +71,104 @@ function cms_custom_new_menu() {
 	  )
 	);
   }
-add_action( 'init', 'cms_custom_new_menu' );
+
+/**
+ * Block template for posts
+ * 	Build structure for post design with (Gutenberg)
+ * 
+ * ---------- section zen-intro :
+ * 
+ * . short desperation
+ * . Title
+ * . Long desperation's
+ * 
+ * 
+ * ---------- section explanation :
+ * 
+ * . Title
+ * . Long desperation's
+ * 
+ * ---------- section benefits :
+ * 
+ * . Title
+ * . Long desperation's
+ * 
+ * ---------- section requirements :
+ * 
+ * . Title
+ * . Long desperation's
+ * 
+*/
+
+
+function cms_post_block_template() {
+	$post_type_object = get_post_type_object( 'post' );
+	$post_type_object->template = array(
+		// zen_intro section
+		array( 'core/heading', array('placeholder' => __('Zen Intro Heading','cms-developer-challenge') ) ),
+		array( 'core/paragraph', array('placeholder' => __('paragraph','cms-developer-challenge') ) ),
+		array( 'core/separator', array('placeholder' => __('separator','cms-developer-challenge') ) ),
+		// participation section
+		array( 'core/heading', array('placeholder' => __('Participation Heading','cms-developer-challenge') ) ),
+		array( 'core/paragraph', array('placeholder' => __('paragraph','cms-developer-challenge') ) ),
+		array( 'core/separator', array('placeholder' => __('separator','cms-developer-challenge') ) ),
+		// explanation section
+		array( 'core/heading', array('placeholder' => __('Explanation Heading','cms-developer-challenge') ) ),
+		array( 'core/paragraph', array('placeholder' => __('paragraph','cms-developer-challenge') ) ),
+		array( 'core/separator', array('placeholder' => __('separator','cms-developer-challenge') ) ),
+		// benefits section
+		array( 'core/heading', array('placeholder' => __('Benefits Heading','cms-developer-challenge') ) ),
+		array( 'core/paragraph', array('placeholder' => __('Zen Intro paragraph','cms-developer-challenge') ) ),
+		array( 'core/separator', array('placeholder' => __('separator','cms-developer-challenge') ) ),
+		// requirements section
+		array( 'core/heading', array('placeholder' => __('Requirements Heading','cms-developer-challenge') ) ),
+		array( 'core/paragraph', array('placeholder' => __('paragraph','cms-developer-challenge') ) ),
+
+	);
+	$post_type_object->template_lock = 'all';
+}
+//core/nextpage
+function cms_implement_main_functions_template()
+{
+	cms_custom_new_menu();
+	cms_post_block_template();
+}
+add_action( 'init', 'cms_implement_main_functions_template' );
+
+
+
+
+/*
+* To get cms blocks
+* TODO:: refactor function
+*/
+function cms_gets_block_template($blocks)
+{
+	if($blocks == null || is_array($blocks) == false )return $blocks;
+	return checkAndSetDataInArray($blocks);
+}
+/*
+* @return   array
+* title     array
+* paragraph array
+*/
+function checkAndSetDataInArray($blocks)
+{
+	$titles=array();
+	$paragraph=array();
+	foreach($blocks as $block)
+	{
+		switch($block["blockName"])
+		{
+
+			case "core/heading":
+				$titles[]=$block['innerHTML'];
+			break;
+			case "core/paragraph":
+				$paragraph[]=$block['innerHTML'];
+			break;
+		}
+	}
+	
+	return array("title"=>$titles,"paragraph"=>$paragraph);
+}
