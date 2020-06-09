@@ -2,9 +2,6 @@
 {
 	position: relative;
 }
-
-/* Refactor scss code to separate files */
-
 @media only screen and (max-width: 600px) {
 	h1 {
 		margin-top: 30px;
@@ -55,7 +52,6 @@
 	}
 }
 @media only screen and (min-width: 1132px) {
-	
 	body {
 		background: #ffffff;
 		background: -moz-linear-gradient(left, #ffffff 0%, #ffffff 66%, #e5ede8 66%, #e5ede8 100%);
